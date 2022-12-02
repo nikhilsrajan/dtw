@@ -7,7 +7,7 @@ Implementing dynamic time warping in python.
 Clone the repository to a folder named `dtw`
 
 ```
-$ git clone https://git.cropin.in/nikhil.sasirajan/dynamic-time-warping.git dtw
+$ git clone https://github.com/nikhilsrajan/dtw.git
 ```
 
 Import into your python file and use the functions
