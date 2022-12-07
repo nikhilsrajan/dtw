@@ -1,5 +1,5 @@
 from .dtw import (
-    dtw,
+    distance,
     compute_accumulated_cost_matrix,
     trace_warp_indexes,
 )

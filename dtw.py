@@ -43,12 +43,10 @@ def compute_accumulated_cost_matrix(a:np.ndarray, b:np.ndarray, ord:float=2)->np
             axis = 2
         a = np.expand_dims(a, axis=axis)
         b = np.expand_dims(b, axis=axis)
-    print(a.shape)
-    print(b.shape)
     return _njit_compute_accumulated_cost_matrix(a=a, b=b, ord=ord)
 
 
-def dtw(a:np.ndarray, b:np.ndarray, ord:float=2, return_warp_indexes:bool=False)->(float|list):
+def distance(a:np.ndarray, b:np.ndarray, ord:float=2, return_warp_indexes:bool=False)->float:
     cost_matrix = compute_accumulated_cost_matrix(a=a, b=b, ord=ord)
     if return_warp_indexes:
         return cost_matrix[-1,-1], trace_warp_indexes(cost_matrix)
